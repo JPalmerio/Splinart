@@ -1,5 +1,3 @@
-%%file .travis.yml
-
 language: python
 env:
   - PYVER="2.7"
@@ -38,7 +36,7 @@ install:
 
 script:
   - pytest --pylint --pylint-rcfile=.pyrcfile --pylint-error-types=EF splinart
-  - pytest --cov=splinart tests
+  - cd tests; pytest --cov=splinart
 
 after_success:
   - codecov -e $PYVER
