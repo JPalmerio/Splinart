@@ -1,5 +1,3 @@
-%%file .travis.yml
-
 language: python
 env:
   - PYVER="2.7"
